@@ -13,7 +13,8 @@ public class GetStudentEnrollmentsHandler(IUnitOfWork unitOfWork): IRequestHandl
             .Repository<Enrollment>()
             .AsQueryable()
             .Where(x => x.StudentId == request.Id)
-            .Include(x => x.Student)
+            .Include(x => x.Subject)
+            .ThenInclude(x => x.Professor)
             .ToListAsync(cancellationToken);
     }
 }

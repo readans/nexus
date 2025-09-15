@@ -1,0 +1,7 @@
+<div class="px-10 pb-14 space-y-6">
+  <h2 class="text-3xl font-semibold">Compañeros de clase</h2>
+  <app-data-table [columns]="[
+    { key: 'name', header: 'Name' },
+    { key: 'email', header: 'Email' },
+  ]" [data]="classmates() || []" />
+</div>

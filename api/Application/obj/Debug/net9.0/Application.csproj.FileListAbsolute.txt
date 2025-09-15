@@ -32,3 +32,4 @@ C:\Users\Usuario\Projects\nexus\api\Application\obj\Debug\net9.0\Application.dll
 C:\Users\Usuario\Projects\nexus\api\Application\obj\Debug\net9.0\refint\Application.dll
 C:\Users\Usuario\Projects\nexus\api\Application\obj\Debug\net9.0\Application.pdb
 C:\Users\Usuario\Projects\nexus\api\Application\obj\Debug\net9.0\ref\Application.dll
+C:\Users\Usuario\Projects\Nexus\api\Application\obj\Debug\net9.0\Application.sourcelink.json

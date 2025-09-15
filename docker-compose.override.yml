@@ -1,7 +1,7 @@
 services:
   api:
     ports:
-      - "8080"
+      - "8080:5055"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Server=db;Database=NexusDb;User=sa;Password=P4ssw0rd.+;TrustServerCertificate=True

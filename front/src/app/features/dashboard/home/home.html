@@ -1,0 +1,38 @@
+<div class="px-10 pb-14 space-y-6">
+  @if (enrollments().length == 0) {
+  <div class="space-y-4">
+    <div class="flex justify-between">
+      <h2 class="text-3xl font-semibold">Inscribir materias</h2>
+      <div class="flex items-center gap-2">
+        Balance: {{balance()}}
+        <button
+          class="bg-dark-gray text-white py-2 px-8 rounded-full cursor-pointer hover:bg-blackish disabled:bg-dark-gray/80 transition-colors duration-300"
+          (click)="subscribeSubjects()" [disabled]="isFetching() || (balance() > 0 )">
+          @if(isFetching()) {
+          <div class="size-5 border-4 border-slate-50 border-t-transparent rounded-full animate-spin"></div>
+          } @else {
+          Inscribir
+          }
+        </button>
+      </div>
+    </div>
+    <div class="grid grid-cols-3 gap-4">
+      @for (subject of subjects.subjects(); track $index) {
+      <app-subject-card [subject]="subject" (select)="addSubject($event)" [selected]="isSelected(subject)"
+        [disabled]="isDisabled(subject)" />
+      }
+    </div>
+
+  </div>
+  }
+
+  <div class="space-y-4">
+    <h2 class="text-3xl font-semibold">Mis materias</h2>
+
+    <div class="grid grid-cols-3 gap-4">
+      @for (enrollment of enrollments(); track $index) {
+      <app-enroll-card [enrollment]="enrollment" />
+      }
+    </div>
+  </div>
+</div>

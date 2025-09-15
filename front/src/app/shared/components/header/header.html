@@ -13,7 +13,8 @@
     <div
       class="h-10 rounded-full flex items-center gap-2 bg-[#ebebeb] dark:bg-black text-gray-900 dark:text-white cursor-pointer [&_*]:cursor-pointer">
       <div class="h-full aspect-square p-[3px]">
-        <img class="max-w-full rounded-full object-cover object-center" [src]="userAvatar" alt="avatar" />
+        <img class="max-w-full rounded-full object-cover object-center"
+          [src]="userAvatar || 'https://i.pravatar.cc/150?img=12'" alt="avatar" />
       </div>
       <label class="pr-2">{{ userName }}</label>
     </div>

@@ -452,3 +452,4 @@ C:\Users\Usuario\Projects\nexus\api\WebApi\bin\Debug\net9.0\ru\Microsoft.CodeAna
 C:\Users\Usuario\Projects\nexus\api\WebApi\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Usuario\Projects\nexus\api\WebApi\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Usuario\Projects\nexus\api\WebApi\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\Usuario\Projects\Nexus\api\WebApi\obj\Debug\net9.0\WebApi.sourcelink.json

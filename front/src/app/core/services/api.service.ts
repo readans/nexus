@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  private baseUrl = 'http://localhost:5055/api';
+  private baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
@@ -20,11 +21,11 @@ export class ApiService {
     return this.http.get<T>(`${this.baseUrl}/${endpoint}`, { params: httpParams });
   }
 
-  post<T>(endpoint: string, body: any, headers?: HttpHeaders): Observable<T> {
+  post<T, R = unknown>(endpoint: string, body: R, headers?: HttpHeaders): Observable<T> {
     return this.http.post<T>(`${this.baseUrl}/${endpoint}`, body, { headers });
   }
 
-  put<T>(endpoint: string, body: any, headers?: HttpHeaders): Observable<T> {
+  put<T, R = unknown>(endpoint: string, body: R, headers?: HttpHeaders): Observable<T> {
     return this.http.put<T>(`${this.baseUrl}/${endpoint}`, body, { headers });
   }
 
