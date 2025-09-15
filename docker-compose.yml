@@ -1,9 +1,19 @@
 services:
   api:
-    build: ./api
+    build:
+      context: api/
+      dockerfile: WebApi/Dockerfile
     container_name: nexus.api
     depends_on:
       - db
+
+  front:
+    build:
+      context: front/
+    container_name: nexus.front
+    depends_on:
+      - db
+      - api
 
   db:
     image: mcr.microsoft.com/mssql/server:2022-latest

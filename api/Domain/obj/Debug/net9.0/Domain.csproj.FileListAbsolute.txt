@@ -20,3 +20,4 @@ C:\Users\Usuario\Projects\nexus\api\Domain\obj\Debug\net9.0\Domain.dll
 C:\Users\Usuario\Projects\nexus\api\Domain\obj\Debug\net9.0\refint\Domain.dll
 C:\Users\Usuario\Projects\nexus\api\Domain\obj\Debug\net9.0\Domain.pdb
 C:\Users\Usuario\Projects\nexus\api\Domain\obj\Debug\net9.0\ref\Domain.dll
+C:\Users\Usuario\Projects\Nexus\api\Domain\obj\Debug\net9.0\Domain.sourcelink.json

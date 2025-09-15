@@ -1,8 +1,9 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { DataTable } from '../../../shared/components/data-table/data-table';
 import { ApiService } from '../../../core/services/api.service';
 import { UserStore } from '../../../shared/stores/user.store';
 import { Student } from '../../../shared/models/student';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-students',
@@ -13,6 +14,7 @@ import { Student } from '../../../shared/models/student';
 })
 export class Students {
 
+  private destroyRef = inject(DestroyRef);
   private api = inject(ApiService);
   private user = inject(UserStore);
   students = signal<Student[]>([]);
@@ -24,7 +26,7 @@ export class Students {
   loadClassmates() {
     if (!this.user.user()) return
 
-    this.api.get<Student[]>('student').subscribe({
+    this.api.get<Student[]>('student').pipe(takeUntilDestroyed(this.destroyRef)).subscribe({
       next: (value) => this.students.set(value)
     })
   }

@@ -28,3 +28,4 @@ C:\Users\Usuario\Projects\nexus\api\Infrastructure\obj\Debug\net9.0\Infrastructu
 C:\Users\Usuario\Projects\nexus\api\Infrastructure\obj\Debug\net9.0\refint\Infrastructure.dll
 C:\Users\Usuario\Projects\nexus\api\Infrastructure\obj\Debug\net9.0\Infrastructure.pdb
 C:\Users\Usuario\Projects\nexus\api\Infrastructure\obj\Debug\net9.0\ref\Infrastructure.dll
+C:\Users\Usuario\Projects\Nexus\api\Infrastructure\obj\Debug\net9.0\Infrastructure.sourcelink.json

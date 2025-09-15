@@ -1,10 +1,14 @@
 services:
   api:
     ports:
-      - "8080:5055"
+      - "4000:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Server=db;Database=NexusDb;User=sa;Password=P4ssw0rd.+;TrustServerCertificate=True
+      - ConnectionStrings__DefaultConnection=Server=db;Database=master;User=sa;Password=P4ssw0rd.+;TrustServerCertificate=True
+
+  front:
+    ports:
+      - "3000:80"
 
   db:
     environment:

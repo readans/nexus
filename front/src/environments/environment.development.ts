@@ -1,5 +1,5 @@
 export const environment = {
-  apiUrl: 'http://localhost:5055/api',
+  apiUrl: 'http://localhost:4000/api',
   firebase: {
     apiKey: "AIzaSyBo3HXx7LTTvwiSmeFFWwwNeJ7-W8WNr2c",
     authDomain: "authenticator-b0b2e.firebaseapp.com",
