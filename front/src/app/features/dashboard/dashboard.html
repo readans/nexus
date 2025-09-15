@@ -1,0 +1,6 @@
+<app-sidebar />
+
+<div class="ml-[300px]">
+  <app-header [userName]="(user$ | async)?.displayName || 'anonymous'" [userAvatar]="(user$ | async)?.photoURL || ''" />
+  <router-outlet />
+</div>

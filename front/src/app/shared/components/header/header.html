@@ -1,0 +1,21 @@
+<header class="sticky w-full z-20 py-5 px-10 flex justify-end items-center">
+
+  <!-- Configuración y usuario -->
+  <div class="flex gap-4 items-center p-1 rounded-full bg-[#f5f5f5]/20 dark:bg-[#121212]/20 backdrop-blur-md">
+
+    <!-- GitHub -->
+    <a class="hover:bg-[#ececec] dark:hover:bg-[#222222] p-2 rounded-full text-[#222222] dark:text-neutral-400 cursor-pointer"
+      href="https://github.com/readans" target="_blank">
+      <github-icon [size]="{width: 24, height: 24}"></github-icon>
+    </a>
+
+    <!-- Perfil -->
+    <div
+      class="h-10 rounded-full flex items-center gap-2 bg-[#ebebeb] dark:bg-black text-gray-900 dark:text-white cursor-pointer [&_*]:cursor-pointer">
+      <div class="h-full aspect-square p-[3px]">
+        <img class="max-w-full rounded-full object-cover object-center" [src]="userAvatar" alt="avatar" />
+      </div>
+      <label class="pr-2">{{ userName }}</label>
+    </div>
+  </div>
+</header>

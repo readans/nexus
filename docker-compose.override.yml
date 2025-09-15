@@ -1,0 +1,14 @@
+services:
+  api:
+    ports:
+      - "8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Database=NexusDb;User=sa;Password=P4ssw0rd.+;TrustServerCertificate=True
+
+  db:
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=P4ssw0rd.+
+    ports:
+      - "1433:1433"

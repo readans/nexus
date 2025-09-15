@@ -1,0 +1,68 @@
+<div class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="flex bg-white rounded-lg shadow-lg max-w-4xl w-full overflow-hidden">
+
+    <div class="hidden md:flex w-1/2 bg-blackish text-white p-10 flex-col justify-between relative rounded-l-lg">
+      <div class="relative z-10">
+        <h1 class="text-4xl font-bold mb-4">
+          Hola <br> Estudiante! 👋
+        </h1>
+        <p class="text-lg">
+          Accede a tu cuenta para continuar con tus cursos y actividades.
+        </p>
+      </div>
+    </div>
+
+    <div class="w-full md:w-1/2 p-10 flex flex-col justify-center">
+      <div class="flex flex-col items-center gap-2 mb-6">
+
+        <div class="flex justify-center items-center gap-2 my-4">
+          <!-- Componente o SVG -->
+          <school-icon class="text-black dark:text-white" [size]="{width: 40, height: 40}"></school-icon>
+          <h2 class="text-2xl font-bold">Nexus</h2>
+        </div>
+
+        <h2 class="text-2xl font-bold">
+          Inicia Sesión
+        </h2>
+
+        <p class="text-gray-600 text-sm">
+          Bienvenido de nuevo! <br>
+        </p>
+      </div>
+
+      <form>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">
+            Email
+          </label>
+          <input type="email" id="email" name="email" placeholder="name@email.com"
+            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-soft-dark-gray placeholder:text-slate-600" />
+        </div>
+        <div class="mb-6">
+          <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">
+            Password
+          </label>
+          <input type="password" id="password" name="password"
+            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-soft-dark-gray" />
+        </div>
+        <button type="submit"
+          class="w-full bg-dark-gray text-white p-2 rounded-lg hover:bg-blackish transition-colors duration-300 mb-4">
+          Login Now
+        </button>
+        <div class="relative flex items-center justify-center text-xs text-gray-400 mb-4">
+          <div class="border-t border-gray-300 flex-grow"></div>
+          <span class="px-2 bg-white">or</span>
+          <div class="border-t border-gray-300 flex-grow"></div>
+        </div>
+        <button type="button"
+          class="w-full flex items-center justify-center p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+          (click)="onGoogleSignIn()">
+          <img src="https://www.google.com/favicon.ico" alt="Google icon" class="w-5 h-5 mr-2" />
+          Login with Google
+        </button>
+      </form>
+    </div>
+  </div>
+
+</div>
